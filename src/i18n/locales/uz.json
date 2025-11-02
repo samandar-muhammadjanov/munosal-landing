@@ -1,0 +1,141 @@
+{
+  "header": {
+    "about": "Kompaniya haqida",
+    "products": "Preparatlar",
+    "advantages": "Afzalliklar",
+    "contact": "Aloqa",
+    "phone": "Savollaringiz bormi",
+    "cta": "Konsultatsiya buyurtma qiling"
+  },
+  "hero": {
+    "slogan": "Salomatlik ishonchdan boshlanadi",
+    "description": "Tabiiy komponentlar asosida yuqori sifatli biologik faol qo'shimchalar va vitamin komplekslarini ishlab chiqarishga ixtisoslashgan zamonaviy farmatsevtika kompaniyasi",
+    "cta": "Bizning preparatlar",
+    "contact": "Biz bilan bog'laning",
+    "stats": {
+      "years": "Yillik tajriba",
+      "products": "Preparatlar",
+      "natural": "Tabiiy",
+      "certified": "Sertifikatlangan"
+    }
+  },
+  "about": {
+    "title": "Kompaniya haqida",
+    "description1": "— bu tabiiy komponentlar asosida yuqori sifatli biologik faol qo'shimchalar va vitamin komplekslarini ishlab chiqarishga ixtisoslashgan zamonaviy farmatsevtika kompaniyasi.",
+    "years": "yillik tajriba",
+    "products": "preparat",
+    "quality": "sifat",
+    "description2": "Bizning missiyamiz — har bir inson uchun sog'lom turmush tarzini qulay narxlarda yuqori sifatli mahsulotlarni taklif qilish orqali ochiq qilishdir. Biz faqat tekshirilgan komponentlar va zamonaviy ishlab chiqarish texnologiyalaridan foydalanamiz."
+  },
+  "products": {
+    "title": "Bizning preparatlar",
+    "subtitle": "Tabiiy komponentlar asosida yuqori sifatli biologik faol qo'shimchalar",
+    "composition": "Tarkibi:",
+    "more": "Batafsil",
+    "items": {
+      "matanit": {
+        "name": "MATANIT BMM",
+        "description": "Kognitiv funksiyalar va asab tizimini qo'llab-quvvatlash",
+        "composition": "L-karnitin, Lizin gidroklorid, Ginkgo biloba ekstrakti, Rux, B1, B2, B6 vitaminlari",
+        "category": "Miya va xotira"
+      },
+      "q10": {
+        "name": "Q10 Active",
+        "description": "Energiya va yurak-qon tomir tizimi salomatligi",
+        "composition": "Koenzim Q10, L-karnitin, eman po'stlog'i, do'lana, pustirnik, itburun, ryabina, yalpiz",
+        "category": "Yurak va energiya"
+      },
+      "vita": {
+        "name": "Vita Strong",
+        "description": "Organizmni kompleks vitamin bilan qo'llab-quvvatlash",
+        "composition": "C vitamini, E vitamini, B1, B2, B9 vitaminlari, L-karnitin, Magniy, Rux",
+        "category": "Vitaminlar"
+      },
+      "calci": {
+        "name": "Calci-D",
+        "description": "Suyak va tishlarni mustahkamlash",
+        "composition": "Kaltsiy, D3 vitamini, K2 vitamini",
+        "category": "Suyak va bo'g'imlar"
+      },
+      "immuno": {
+        "name": "Immuno Herb",
+        "description": "Immunitetni tabiiy himoyalash",
+        "composition": "Exinaseya, veynik tuproqli, shuqka derno o't, uzum urug'i",
+        "category": "Immunitet"
+      },
+      "synbio": {
+        "name": "SynBio+",
+        "description": "Hazm tizimi salomatligi",
+        "composition": "Probiotik + prebiotik + rux (15 xil tirik bakteriya)",
+        "category": "Hazm qilish"
+      },
+      "cardio": {
+        "name": "Cardio Plus",
+        "description": "Yurak va qon tomirlarini qo'llab-quvvatlash",
+        "composition": "Arginin, B1, B6, B12 vitaminlari, Karnitin, Lizin, Zolototisyachnik",
+        "category": "Yurak"
+      },
+      "mens": {
+        "name": "Men's Power",
+        "description": "Erkaklar salomatligi va energiyasi",
+        "composition": "Yakorts, Evrikoma, Goryanka, Ginkgo Biloba, Arginin, Rux, Piperin",
+        "category": "Erkaklar uchun"
+      },
+      "colla": {
+        "name": "CollaFlex",
+        "description": "Bo'g'imlar va teri salomatligi",
+        "composition": "Kollagen, Xondroitin, C vitamini, Gialuronik kislota, Kremniy",
+        "category": "Bo'g'imlar va teri"
+      },
+      "hepa": {
+        "name": "Hepa Detox",
+        "description": "Detoksifikatsiya va jigar salomatligi",
+        "composition": "Qizilmiya, Itburun, Silimarin, Sarimsoq, Faollashtirilgan ko'mir",
+        "category": "Jigar va detoks"
+      }
+    }
+  },
+  "advantages": {
+    "title": "Bizning afzalliklarimiz",
+    "cert": {
+      "title": "Xalqaro sertifikatlash",
+      "description": "Barcha preparatlarimiz qattiq sifat nazoratidan o'tadi va zarur sertifikatlarga ega"
+    },
+    "production": {
+      "title": "O'z ishlab chiqarish",
+      "description": "GMP standartlariga rioya qilgan holda zamonaviy uskunalarda to'liq ishlab chiqarish sikli"
+    },
+    "natural": {
+      "title": "Tabiiy komponentlar",
+      "description": "Faqat tekshirilgan yetkazib beruvchilardan eng yuqori sifatli tabiiy ingredientlardan foydalanamiz"
+    },
+    "safety": {
+      "title": "Xavfsizlik va samaradorlik",
+      "description": "Har bir partiya ko'p bosqichli nazorat va laboratoriya tadqiqotlaridan o'tadi"
+    }
+  },
+  "contact": {
+    "title": "Aloqa",
+    "subtitle": "Biz bilan bog'laning",
+    "description": "Preparatlarimiz haqida savollar bormi? Tarkib haqida ko'proq bilishni yoki maslahat olishni xohlaysizmi? Biz sizga yordam berishdan doim xursandmiz!",
+    "phone": "Telefon",
+    "telegram": "Telegram",
+    "email": "Email",
+    "formTitle": "Qayta aloqa shakli",
+    "name": "Ismingiz",
+    "nameLabel": "Ismingizni kiriting",
+    "phoneLabel": "Telefon",
+    "phonePlaceholder": "+998 (XX) XXX-XX-XX",
+    "message": "Izoh",
+    "messagePlaceholder": "Sizning xabaringiz...",
+    "submit": "Xabar yuborish",
+    "success": "Xabaringiz uchun rahmat! Biz tez orada siz bilan bog'lanamiz."
+  },
+  "footer": {
+    "description": "Salomatlikni saqlashda ishonchli hamkoringiz. Eng yuqori sifatli tabiiy preparatlar.",
+    "navigation": "Navigatsiya",
+    "social": "Ijtimoiy tarmoqlarda",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "disclaimer": "Qo'llashdan oldin shifokor bilan maslahatlashing"
+  }
+}

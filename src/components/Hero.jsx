@@ -38,36 +38,36 @@ export default function Hero() {
         </p>
 
         {/* Statistics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-4xl mx-auto mb-12">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl md:text-5xl font-bold text-white mb-2">15+</div>
-            <div className="text-sm md:text-base text-white/80">{t('hero.stats.years')}</div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 max-w-4xl mx-auto mb-8 md:mb-12">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">15+</div>
+            <div className="text-xs md:text-sm lg:text-base text-white/80">{t('hero.stats.years')}</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl md:text-5xl font-bold text-white mb-2">10+</div>
-            <div className="text-sm md:text-base text-white/80">{t('hero.stats.products')}</div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">10+</div>
+            <div className="text-xs md:text-sm lg:text-base text-white/80">{t('hero.stats.products')}</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl md:text-5xl font-bold text-white mb-2">100%</div>
-            <div className="text-sm md:text-base text-white/80">{t('hero.stats.natural')}</div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">100%</div>
+            <div className="text-xs md:text-sm lg:text-base text-white/80">{t('hero.stats.natural')}</div>
           </div>
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
-            <div className="text-4xl md:text-5xl font-bold text-white mb-2">GMP</div>
-            <div className="text-sm md:text-base text-white/80">{t('hero.stats.certified')}</div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 hover:bg-white/20 transition-all duration-300 transform hover:scale-105">
+            <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">GMP</div>
+            <div className="text-xs md:text-sm lg:text-base text-white/80">{t('hero.stats.certified')}</div>
           </div>
         </div>
 
         {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center">
           <button
             onClick={scrollToProducts}
-            className="bg-white text-primary px-10 py-4 rounded-full font-semibold text-lg hover:bg-primary-mint hover:text-dark transition-all duration-300 transform hover:scale-105 shadow-2xl"
+            className="w-full sm:w-auto bg-white text-primary px-8 md:px-10 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:bg-primary-mint hover:text-dark transition-all duration-300 transform hover:scale-105 shadow-2xl"
           >
             {t('hero.cta')}
           </button>
           <a
             href="#contact"
-            className="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
+            className="w-full sm:w-auto bg-transparent border-2 border-white text-white px-8 md:px-10 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:bg-white hover:text-primary transition-all duration-300 transform hover:scale-105"
           >
             {t('hero.contact')}
           </a>

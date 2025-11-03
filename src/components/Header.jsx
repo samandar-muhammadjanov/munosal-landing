@@ -19,6 +19,17 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   const navLinks = [
     { name: t('header.about'), href: '#about' },
     { name: t('header.products'), href: '#products' },
@@ -154,48 +165,120 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Fullscreen Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-700 animate-slide-up">
-            <ul className="space-y-3 mb-4">
-              {navLinks.map((link) => (
-                <li key={link.name}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    className="block text-light hover:text-primary-light transition-colors font-medium py-2"
+          <div className="lg:hidden fixed inset-0 z-50 bg-gradient-to-br from-primary to-primary-light animate-fade-in">
+            <div className="h-full flex flex-col">
+              {/* Header */}
+              <div className="flex items-center justify-between p-4 border-b border-white/20">
+                <img src={logo} alt="MUNOSAL" className="h-12 w-auto" />
+                <button
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-white p-2"
+                  aria-label="Close menu"
+                >
+                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1 overflow-y-auto px-6 py-8">
+                {/* Navigation */}
+                <nav className="mb-12">
+                  <ul className="space-y-6">
+                    {navLinks.map((link) => (
+                      <li key={link.name}>
+                        <a
+                          href={link.href}
+                          onClick={(e) => handleNavClick(e, link.href)}
+                          className="block text-white text-2xl font-medium hover:text-white/80 transition-colors"
+                        >
+                          {link.name}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+
+                {/* Company Description */}
+                <div className="mb-8">
+                  <h2 className="text-4xl font-bold text-white mb-4">{t('hero.slogan')}</h2>
+                  <p className="text-white/90 text-base leading-relaxed mb-6">
+                    {t('hero.description')}
+                  </p>
+                </div>
+
+                {/* Statistics */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="text-3xl font-bold text-white mb-1">15+</div>
+                    <div className="text-xs text-white/80">{t('hero.stats.years')}</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="text-3xl font-bold text-white mb-1">10+</div>
+                    <div className="text-xs text-white/80">{t('hero.stats.products')}</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="text-3xl font-bold text-white mb-1">100%</div>
+                    <div className="text-xs text-white/80">{t('hero.stats.natural')}</div>
+                  </div>
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
+                    <div className="text-3xl font-bold text-white mb-1">GMP</div>
+                    <div className="text-xs text-white/80">{t('hero.stats.certified')}</div>
+                  </div>
+                </div>
+
+                {/* CTA Buttons */}
+                <div className="space-y-3 mb-6">
+                  <button
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="w-full bg-white text-primary px-6 py-4 rounded-full font-semibold text-base hover:bg-white/90 transition-all"
                   >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
+                    {t('hero.cta')}
+                  </button>
+                  <button
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="w-full bg-transparent border-2 border-white text-white px-6 py-4 rounded-full font-semibold text-base hover:bg-white/10 transition-all"
+                  >
+                    {t('hero.contact')}
+                  </button>
+                </div>
 
-            {/* Mobile Language Toggle */}
-            <div className="flex items-center space-x-2 mb-4">
-              <span className="text-gray-400 text-sm">Язык:</span>
-              <button
-                onClick={() => changeLanguage(currentLang === 'ru' ? 'uz' : 'ru')}
-                className="w-10 h-10 flex items-center justify-center border border-gray-600 rounded-full hover:bg-gray-700 transition-colors"
-              >
-                <span className="text-light text-xs font-medium">{currentLang.toUpperCase()}</span>
-              </button>
+                {/* Contact & Language */}
+                <div className="border-t border-white/20 pt-6">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-white/80 text-sm">{t('header.phone')}</span>
+                    <a href="tel:+998781136046" className="text-white font-semibold text-lg">
+                      +998 78 113-60-46
+                    </a>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-white/80 text-sm">Язык:</span>
+                    <button
+                      onClick={() => changeLanguage(currentLang === 'ru' ? 'uz' : 'ru')}
+                      className="flex items-center space-x-2 bg-white/20 px-4 py-2 rounded-full hover:bg-white/30 transition-colors"
+                    >
+                      <span className="text-white text-sm font-medium">{currentLang === 'ru' ? 'RU' : 'UZ'}</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Scroll Indicator */}
+              <div className="p-4 flex justify-center">
+                <svg className="w-6 h-6 text-white/60 animate-bounce" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+                  <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+              </div>
             </div>
-
-            {/* Mobile Phone & CTA */}
-            <a
-              href="tel:+998781136046"
-              className="flex items-center space-x-2 text-light mb-4 py-2"
-            >
-              <svg className="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-              </svg>
-              <span>+998781136046</span>
-            </a>
-
-            <button className="w-full bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-full font-semibold transition-all">
-              {t('header.cta')}
-            </button>
           </div>
         )}
       </nav>

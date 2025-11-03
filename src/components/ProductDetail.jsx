@@ -156,49 +156,49 @@ export default function ProductDetail() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <div className="bg-gradient-to-br from-primary to-primary-light text-white py-20">
+      <div className="bg-gradient-to-br from-primary to-primary-light text-white py-12 md:py-20 pt-24 md:pt-28">
         <div className="container mx-auto px-4">
           <button
             onClick={() => navigate('/')}
-            className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors mb-8"
+            className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors mb-6 md:mb-8"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            <span>Назад к продуктам</span>
+            <span className="text-sm md:text-base">Назад к продуктам</span>
           </button>
           
           <div className="max-w-4xl">
-            <span className="inline-block bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-4">
+            <span className="inline-block bg-white/20 px-3 py-1.5 md:px-4 md:py-2 rounded-full text-xs md:text-sm font-medium mb-3 md:mb-4">
               {product.category}
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">{product.name}</h1>
-            <p className="text-xl text-white/90">{product.description}</p>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">{product.name}</h1>
+            <p className="text-base md:text-lg lg:text-xl text-white/90">{product.description}</p>
           </div>
         </div>
       </div>
 
       {/* Content Section */}
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-8 md:py-16">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {/* Main Content */}
-            <div className="md:col-span-2 space-y-8">
+            <div className="md:col-span-2 space-y-6 md:space-y-8">
               {/* Full Description */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Описание</h2>
-                <p className="text-gray-600 leading-relaxed">{product.fullDescription}</p>
+              <div className="bg-white rounded-2xl shadow-lg p-5 md:p-8">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">Описание</h2>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{product.fullDescription}</p>
               </div>
 
               {/* Composition */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">Состав</h2>
-                <p className="text-gray-600 leading-relaxed">{product.composition}</p>
+              <div className="bg-white rounded-2xl shadow-lg p-5 md:p-8">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-3 md:mb-4">Состав</h2>
+                <p className="text-sm md:text-base text-gray-600 leading-relaxed">{product.composition}</p>
               </div>
 
               {/* Usage */}
-              <div className="bg-white rounded-2xl shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-gray-800 mb-6">Применение</h2>
+              <div className="bg-white rounded-2xl shadow-lg p-5 md:p-8">
+                <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-4 md:mb-6">Применение</h2>
                 <div className="space-y-4">
                   <div>
                     <h3 className="font-semibold text-gray-800 mb-2">Дозировка:</h3>
@@ -223,15 +223,15 @@ export default function ProductDetail() {
             {/* Sidebar */}
             <div className="space-y-6">
               {/* Contact Card */}
-              <div className="bg-primary text-white rounded-2xl shadow-lg p-6 sticky top-24">
-                <h3 className="text-xl font-bold mb-4">Есть вопросы?</h3>
-                <p className="text-white/90 mb-6">Свяжитесь с нами для получения консультации</p>
+              <div className="bg-primary text-white rounded-2xl shadow-lg p-5 md:p-6 md:sticky md:top-24">
+                <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Есть вопросы?</h3>
+                <p className="text-sm md:text-base text-white/90 mb-4 md:mb-6">Свяжитесь с нами для получения консультации</p>
                 
                 <a
                   href="tel:+998781136046"
-                  className="flex items-center justify-center space-x-2 bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary-mint transition-colors mb-3"
+                  className="flex items-center justify-center space-x-2 bg-white text-primary px-4 py-2.5 md:px-6 md:py-3 rounded-lg text-sm md:text-base font-semibold hover:bg-primary-mint transition-colors mb-3"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
                   <span>Позвонить</span>
@@ -241,9 +241,9 @@ export default function ProductDetail() {
                   href="https://t.me/munosal"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                  className="flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm text-white px-4 py-2.5 md:px-6 md:py-3 rounded-lg text-sm md:text-base font-semibold hover:bg-white/20 transition-colors"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.008-1.252-.241-1.865-.44-.752-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635.099-.002.321.023.465.14.121.099.155.232.171.326.016.093.036.306.02.472z"/>
                   </svg>
                   <span>Telegram</span>
@@ -251,9 +251,9 @@ export default function ProductDetail() {
               </div>
 
               {/* Features */}
-              <div className="bg-white rounded-2xl shadow-lg p-6">
-                <h3 className="text-lg font-bold text-gray-800 mb-4">Преимущества</h3>
-                <ul className="space-y-3">
+              <div className="bg-white rounded-2xl shadow-lg p-5 md:p-6">
+                <h3 className="text-base md:text-lg font-bold text-gray-800 mb-3 md:mb-4">Преимущества</h3>
+                <ul className="space-y-2 md:space-y-3">
                   <li className="flex items-start space-x-3">
                     <svg className="w-5 h-5 text-primary mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
